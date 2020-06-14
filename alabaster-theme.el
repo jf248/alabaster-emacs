@@ -13,7 +13,9 @@
 (deftheme alabaster
   "Alabster skin.")
 
-(let ((selection-color (if (featurep 'ns) "ns_selection_color" "#C9D0D9"))
+(let (
+      ;; (selection-color (if (featurep 'ns) "ns_selection_color" "#C9D0D9"))
+      (selection-color "#C9D0D9")
       (highlight-color "#EEE00A")
       (secondary-color "#FBE9AD")
       (active-color "#EEEEEE")
@@ -41,8 +43,9 @@
    '(yellow ((t (:foreground "yellow"))))
 
    ;; Frame
-   '(fringe ((t (:background "#f7f7f7"))))
-   `(mode-line ((t (:background "#e8e8e8" :foreground "black"
+   ;; '(fringe ((t (:background "#f7f7f7"))))
+   '(fringe ((t (:background "#ffffff"))))
+   `(mode-line ((t (:background "#e8e8e8" :foreground "black" :distant-foreground "white"
                                 :box (:line-width -1 :color ,border-color)))))
    '(mode-line-highlight ((t (:box (:line-width 2 :color "#9599B0")))))
    `(mode-line-inactive
@@ -71,18 +74,31 @@
    '(mumamo-background-chunk-submode ((t (:background "#EAEBE6"))))
 
    ;; Font-lock
-   '(font-lock-builtin-face ((t (:foreground "#626FC9"))))
-   '(font-lock-comment-face ((t (:foreground "#7F7F7F"))))
-   '(font-lock-constant-face ((t (:foreground "#7653C1" :background "#F3F2FF"))))
-   '(font-lock-doc-string-face ((t (:foreground "#1A93AE" :background "#F4F9FE"))))
-   '(font-lock-function-name-face ((t (:foreground "#4E279A"))))
-   '(font-lock-keyword-face ((t (:foreground "#6700B9"))))
-   '(font-lock-preprocessor-face ((t (:foreground "#434343"))))
-   '(font-lock-reference-face ((t (:foreground "#4E279A" :background "#F3F2FF"))))
-   '(font-lock-string-face ((t (:foreground "#BC670F" :background "#FDFBF5"))))
-   '(font-lock-type-face ((t (:foreground "#699D36"))))
-   '(font-lock-variable-name-face ((t (:foreground "#7B8C4D"))))
-   '(font-lock-warning-face ((t (:foreground "#F93232"))))
+   ;; '(font-lock-builtin-face ((t (:foreground "#626FC9"))))
+   ;; '(font-lock-comment-face ((t (:foreground "#7F7F7F"))))
+   ;; '(font-lock-constant-face ((t (:foreground "#7653C1" :background "#F3F2FF"))))
+   ;; '(font-lock-doc-string-face ((t (:foreground "#1A93AE" :background "#F4F9FE"))))
+   ;; '(font-lock-function-name-face ((t (:foreground "#4E279A"))))
+   ;; '(font-lock-keyword-face ((t (:foreground "#000000"))))
+   ;; '(font-lock-preprocessor-face ((t (:foreground "#434343"))))
+   ;; '(font-lock-reference-face ((t (:foreground "#4E279A" :background "#F3F2FF"))))
+   ;; '(font-lock-string-face ((t (:foreground "#BC670F" :background "#FDFBF5"))))
+   ;; '(font-lock-type-face ((t (:foreground "#699D36"))))
+   ;; '(font-lock-variable-name-face ((t (:foreground "#7B8C4D"))))
+   ;; '(font-lock-warning-face ((t (:foreground "#F93232"))))
+
+   '(font-lock-builtin-face ((t (:foreground "#00000"))))
+   '(font-lock-comment-face ((t (:foreground "#AA3731"))))
+   '(font-lock-constant-face ((t (:foreground "#7A3E9D"))))
+   '(font-lock-doc-string-face ((t (:foreground "#000000"))))
+   '(font-lock-function-name-face ((t (:foreground "#325CC0"))))
+   '(font-lock-keyword-face ((t (:foreground "#000000"))))
+   '(font-lock-preprocessor-face ((t (:foreground "#000000"))))
+   '(font-lock-reference-face ((t (:foreground "#000000"))))
+   '(font-lock-string-face ((t (:foreground "#448C27"))))
+   '(font-lock-type-face ((t (:foreground "#000000"))))
+   '(font-lock-variable-name-face ((t (:foreground "#325CC0"))))
+   '(font-lock-warning-face ((t (:foreground "#000000"))))
 
    ;; Diff Mode
    '(diff-file-header ((t (:bold t :inherit diff-header))))
